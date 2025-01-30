@@ -6,7 +6,7 @@ use App\Http\Controllers\AuthController;
 Route::group([
     //'middleware' => 'api',
     'prefix' => 'auth',
-    'middleware' => ['auth:api', 'role:writer'],
+    //'middleware' => ['auth:api', 'role:writer'],
 ], function ($router) {
     Route::post('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/login', [AuthController::class, 'login'])->name('login');
